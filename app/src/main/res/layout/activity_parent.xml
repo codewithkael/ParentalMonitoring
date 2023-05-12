@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/observeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="8"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/childUsernameEt"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="match_parent"
+                android:hint="child username" />
+            <EditText
+                android:id="@+id/childPasswordEt"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="match_parent"
+                android:hint="child password" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/observeBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="observe"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/switchCamera"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="switch camera"
+                android:textSize="12sp" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/startLocating"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:enabled="true"
+                android:text="start locating"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/remoteView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+    <org.osmdroid.views.MapView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/map"/>
+</LinearLayout>
